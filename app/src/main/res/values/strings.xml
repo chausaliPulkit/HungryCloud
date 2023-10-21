@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">HungryCloud</string>
+    <string name="eat_what_you_want_when_you_want">Eat what you want, when you want.</string>
+    <string name="next">Next</string>
+    <string name="login_to_your_account">Login To Your Account</string>
+    <string name="or">OR</string>
+    <string name="contiue_with">Continue With</string>
+    <string name="email">Email</string>
+    <string name="passowrd">Passowrd</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_account">Don\'t Have Account?</string>
+    <string name="sign_up_here">Sign Up Here</string>
+    <string name="email_or_phone_number">Email Or Phone Number</string>
+    <string name="name">Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="choose_your_location">Choose Your Location</string>
+    <string name="choose_location">Choose Location</string>
+    <string name="app_tag_line">Satisfy your cravings with just a few taps</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home_fragment">Hello Home fragment</string>
+</resources>
