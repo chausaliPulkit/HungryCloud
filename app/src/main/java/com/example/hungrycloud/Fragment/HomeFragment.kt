@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.hungrycloud.MenuBottomSheetFragment
 import com.example.hungrycloud.R
 import com.example.hungrycloud.adapter.PopularFoodItemAdapter
 import com.example.hungrycloud.databinding.FragmentHomeBinding
@@ -32,6 +33,10 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding.viewAllMenu.setOnClickListener {
+            val bottomSheetDialogFragment = MenuBottomSheetFragment()
+            bottomSheetDialogFragment.show(parentFragmentManager, "Test")
+        }
         return binding.root
 
 
