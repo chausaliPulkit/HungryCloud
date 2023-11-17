@@ -7,16 +7,17 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.hungrycloud.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private val binding: ActivityMainBinding by lazy {
-        ActivityMainBinding.inflate(layoutInflater)
-    }
-
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        var navController = findNavController(R.id.fragmentContainerView)
+        val navController = findNavController(R.id.fragmentContainerView)
         binding.bottomNavBar.setupWithNavController(navController)
+        binding.notificationIconImageView.setOnClickListener {
+            val notificationBottomSheetDialog = NotificationBottomFragment()
+            notificationBottomSheetDialog.show(supportFragmentManager, "Test")
+        }
 
     }
 }

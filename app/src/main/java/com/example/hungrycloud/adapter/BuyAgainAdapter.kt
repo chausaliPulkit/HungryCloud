@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hungrycloud.data.MenuItemData
 import com.example.hungrycloud.databinding.BuyAgainItemBinding
 
-class BuyAgainAdapter(val foodItemList: ArrayList<MenuItemData>) :
+class BuyAgainAdapter(private val foodItemList: ArrayList<MenuItemData>) :
     RecyclerView.Adapter<BuyAgainAdapter.BuyAgainViewHolder>() {
 
 
@@ -17,15 +17,16 @@ class BuyAgainAdapter(val foodItemList: ArrayList<MenuItemData>) :
     }
 
     override fun onBindViewHolder(holder: BuyAgainViewHolder, position: Int) {
-        holder.bind(foodItemList[position])
+        holder.bind(position)
     }
 
     override fun getItemCount(): Int = foodItemList.size
 
 
-    class BuyAgainViewHolder(private val binding: BuyAgainItemBinding) :
+    inner class BuyAgainViewHolder(private val binding: BuyAgainItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(curMenuItemData: MenuItemData) {
+        fun bind(position: Int) {
+            val curMenuItemData = foodItemList[position]
             binding.apply {
                 recentBuyFoodnameTextview.text = curMenuItemData.foodName
                 recentBuyFoodpriceTextview.text = curMenuItemData.foodPrice
