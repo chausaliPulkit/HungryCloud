@@ -26,7 +26,7 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentMenuBottomSheetBinding.inflate(inflater, container, false)
-        binding.bottomSheetBackButton.setOnClickListener {
+        binding.menuBottomSheetBackButton.setOnClickListener {
             dismiss()
         }
 

@@ -7,11 +7,12 @@
     tools:context=".MenuBottomSheetFragment">
 
     <ImageButton
-        android:id="@+id/bottom_sheet_back_button"
+        android:id="@+id/menu_bottom_sheet_back_button"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
         android:background="@android:color/transparent"
         android:src="@drawable/outline_arrow_circle_left_24" />
 
