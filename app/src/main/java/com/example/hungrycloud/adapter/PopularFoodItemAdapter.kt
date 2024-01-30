@@ -1,14 +1,18 @@
 package com.example.hungrycloud.adapter
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hungrycloud.DetailsFoodActivity
 import com.example.hungrycloud.databinding.PopularItemBinding
 
 class PopularFoodItemAdapter(
     private val items: List<String>,
     private val price: List<Int>,
-    private val imageList: List<Int>
+    private val imageList: List<Int>,
+    private val requiredContext: Context
 ) :
     RecyclerView.Adapter<PopularFoodItemAdapter.PopularViewHolder>() {
 
@@ -29,6 +33,13 @@ class PopularFoodItemAdapter(
         val curImage = imageList[position]
         val curItemPrice = price[position]
         holder.bind(item, curImage, curItemPrice)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(requiredContext, DetailsFoodActivity::class.java)
+            intent.putExtra("MenuItemFoodName", item)
+            intent.putExtra("MenuItemFoodImage", curImage)
+            requiredContext.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

@@ -9,7 +9,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="350dp"
-        android:layout_height="88dp"
+        android:layout_height="98dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         app:cardCornerRadius="24dp"
@@ -23,16 +23,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/menu_food_image_view"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="8dp"
-                android:scaleType="centerCrop"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/menuFoodImageCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/menu_food_image_view"
+                    android:layout_width="98dp"
+                    android:layout_height="98dp"
+                    android:scaleType="centerCrop"
+
+                    tools:srcCompat="@tools:sample/avatars" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/menu_food_name"
@@ -42,9 +49,9 @@
                 android:text="Food Name"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/menu_food_image_view"
-                app:layout_constraintStart_toEndOf="@+id/menu_food_image_view"
-                app:layout_constraintTop_toTopOf="@+id/menu_food_image_view" />
+                app:layout_constraintBottom_toBottomOf="@+id/menuFoodImageCardView"
+                app:layout_constraintStart_toEndOf="@+id/menuFoodImageCardView"
+                app:layout_constraintTop_toTopOf="@+id/menuFoodImageCardView" />
 
             <TextView
                 android:id="@+id/menu_price_text_view"

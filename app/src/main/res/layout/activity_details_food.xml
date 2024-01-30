@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp">
+
+    <ImageButton
+        android:id="@+id/detailFoodBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/car_ui_icon_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageButton>
+    <!-- Default Android image -->
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/foodImageCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="128dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailFoodBackButton">
+
+        <ImageView
+            android:id="@+id/detailFoodImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/burger"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailFoodBackButton" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Food name -->
+    <TextView
+        android:id="@+id/foodNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/foodImageCardView"
+        app:layout_constraintTop_toTopOf="@id/foodImageCardView" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/foodDescriptionView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Description of the food"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/foodImageCardView"
+        app:layout_constraintTop_toBottomOf="@+id/foodNameView" />
+
+    <!-- Ingredients -->
+    <TextView
+        android:id="@+id/foodIngredientsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Ingredients:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/foodImageCardView"
+        app:layout_constraintTop_toBottomOf="@+id/foodDescriptionView" />
+
+    <!-- List of ingredients -->
+    <TextView
+        android:id="@+id/foodIngredientListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="8dp"
+        android:text="ingredient1,\n ingredient2, "
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/foodIngredientsView"
+        app:layout_constraintTop_toBottomOf="@+id/foodDescriptionView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -73,7 +73,7 @@ class HomeFragment : Fragment() {
             R.drawable.sandwich,
             R.drawable.kathirolls
         )
-        val adapter = PopularFoodItemAdapter(foodName, price, foodImages)
+        val adapter = PopularFoodItemAdapter(foodName, price, foodImages, requireContext())
         binding.foodItemRecyclerView.layoutManager = LinearLayoutManager(context)
         binding.foodItemRecyclerView.adapter = adapter
     }
